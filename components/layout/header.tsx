@@ -23,7 +23,7 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed w-full flex justify-center py-8 transition-all duration-500 border-b z-50 ${scrolled ? "border-white/10 backdrop-blur-sm bg-dark/80" : "border-transparent"}`}
+      className={`fixed w-full flex justify-center py-8 transition-all duration-500 sm:border-b z-50 ${scrolled ? "border-white/10 sm:backdrop-blur-sm sm:bg-dark/80" : "border-transparent"}`}
     >
       <nav>
         <ul className="flex items-center gap-8">
@@ -40,6 +40,7 @@ export default function Header() {
                 to={url}
                 href={url}
                 duration={400}
+                hashSpy
                 smooth
                 spy
               >

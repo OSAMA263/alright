@@ -10,7 +10,7 @@ export default function Section({
   className,
 }: PropTypes) {
   return (
-    <section className={`min-h-dvh flex items-center relative overflow-x-hidden ${className ?? ""}`} id={id}>
+    <section className={`py-4 min-h-dvh flex items-center relative overflow-x-hidden ${className ?? ""}`} id={id}>
       {children}
     </section>
   );
