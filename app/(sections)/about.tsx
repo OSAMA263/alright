@@ -1,0 +1,3 @@
+I'm a developer passionate about crafting accessible, pixel-perfect user interfaces that blend thoughtful design with robust engineering. My favorite work lies at the intersection of design and development.
+Over the past 2 years I've been sharpening my skills through personal projects, and gained hands-on experience during a frontend internship.
+In my spare time I'm usually exploring new technologies or experimenting with creative coding projects.F
