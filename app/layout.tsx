@@ -31,13 +31,8 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-      style={{
-        color: "white",
-        // cursor: "url('cursor-icon.png'), auto",
-        fontWeight:"600"
-      }}
     >
-      <body className="bg-[#080c11]">
+      <body className="bg-[#080c11] font-semibold text-white" style={{overflowX:"hidden"}}>
         <Header />
         <CursorGlow />
         <main>{children}</main>
