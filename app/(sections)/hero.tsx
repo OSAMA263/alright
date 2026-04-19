@@ -37,7 +37,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* glowing circle on the right */}
+      {/* GLOWING CIRCLE ON THE RIGHT */}
       <div
         style={{
           background:

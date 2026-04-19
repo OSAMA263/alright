@@ -24,7 +24,7 @@ export const EXP = [
       name: "Personal Projects",
       url: "https://github.com/OSAMA263?tab=stars",
     },
-    duration: "2021 - Present",
+    duration: "2022 - Present",
     des: "Built multiple web applications and projects to deepen my understanding of web development. Focused on learning modern frameworks, responsive design, and best practices through hands-on implementation.",
     skills: [
       "React",

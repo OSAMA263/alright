@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-import { CursorGlow } from "@/components/cursor-glow";
+import { CursorGlow } from "@/components/ui/cursor-glow";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 
@@ -32,7 +32,7 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="bg-[#080c11] font-semibold text-white" style={{overflowX:"hidden"}}>
+      <body className="bg-[#05080b] font-semibold text-white" style={{overflowX:"hidden"}}>
         <Header />
         <CursorGlow />
         <main>{children}</main>
