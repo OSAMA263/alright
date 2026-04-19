@@ -21,7 +21,11 @@ export default function About() {
       <PageContainer className="grid lg:grid-cols-2 max-sm:grid-rows-1 max-lg:grid-rows-2 2xl:gap-20 gap-10">
         {/* LEFT CONTENT ABOUT ME AND SHIT */}
         <div className="space-y-10 text-lg text-secondary">
-          <SectionTitle title="about" number={1} />
+          <SectionTitle
+            title="about"
+            number={1}
+            className="[&>div]:w-1/2"
+          />
           <p>
             I'm a developer passionate about crafting accessible,
             pixel-perfect user interfaces that blend thoughtful design

@@ -8,10 +8,10 @@ export default function SectionTitle(props: PropsType) {
   const { title, className, number } = props;
 
   return (
-    <div className={`flex items-end gap-3 ${className ?? ""}`}>
+    <div className={`flex items-end gap-3 mb-10 ${className ?? ""}`}>
       <span className="text-lightTeal text-xs">0{number}.</span>
       <h2 className="lg:text-5xl text-4xl capitalize text-white">{title}</h2>
-      <div className="w-full h-px bg-white/10 self-center" />
+      <div className="w-[30%] h-px bg-white/10" />
     </div>
   );
 }
