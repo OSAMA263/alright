@@ -23,7 +23,7 @@ export default function About() {
         <Summary />
         
         {/* RIGHT CONTENT, THE CARD AND THE NAME AND SHIT ALSO */}
-        <div className="font-mono max-sm:hidden about-teal-card flex items-center justify-center text-5xl text-[#152d2e]">
+        <div className="font-mono max-sm:hidden about-teal-card flex items-center justify-center text-5xl text-darkerTeal">
           OK
           {/* but the o k letters make them small */}
           {/* in the bash section the right side make a text virticly, ".yasterday was tommorow and tommorow will becom yaster day, breath." on the glowing blob */}

@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @theme {
+  --color-darkerTeal: #152d2e;
   --color-darkTeal: #00bfa7;
   --color-lightTeal: #04cdb3;
   --color-secondary: #7c8690;
@@ -9,7 +10,7 @@
   width: 100%;
   height: 100%;
   transition: all 0.4s;
-  background-color: #152d2e;
+  background-color: var(--color-darkerTeal);
   border-radius: 1rem;
   position: relative;
   &::after {
@@ -17,7 +18,7 @@
     width: 100%;
     height: 100%;
     transition: all 0.4s;
-    border: 1px solid var(--color-lightTeal);
+    border: 1px solid #215557;
     border-radius: 1rem;
     position: absolute;
     top: 2%;
