@@ -1,7 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
 import PageContainer from "@/components/layout/page-container";
 import Section from "@/components/layout/section";
+import PlainBtn from "@/components/plain-btn";
 import SectionTitle from "@/components/ui/section-title";
+import Image from "next/image";
 import { IoMdArrowDropright } from "react-icons/io";
 
 const skills = [
@@ -21,22 +23,31 @@ export default function About() {
       <PageContainer className="grid lg:grid-cols-2 max-sm:grid-rows-1 max-lg:grid-rows-2 2xl:gap-20 gap-10">
         {/* LEFT CONTENT ABOUT ME AND SHIT */}
         <Summary />
-        
+
         {/* RIGHT CONTENT, THE CARD AND THE NAME AND SHIT ALSO */}
-        <div className="font-mono max-sm:hidden about-teal-card flex items-center justify-center text-5xl text-darkerTeal">
-          OK
-          {/* but the o k letters make them small */}
-          {/* in the bash section the right side make a text virticly, ".yasterday was tommorow and tommorow will becom yaster day, breath." on the glowing blob */}
+        <div className="max-sm:hidden card-teal-border flex items-center justify-center">
+          <PlainBtn
+            step={1}
+            aria-label="one-of-the steps"
+            className="transition-all duration-500 flex scale-50 items-center justify-center hover:scale-400"
+          >
+            <div className="relative w-2 h-2">
+              <Image src="/o_letter.svg" alt="letter-o" fill />
+            </div>
+            <div className="relative w-2 h-2">
+              <Image src="/k_letter.svg" alt="letter-k" fill />
+            </div>
+          </PlainBtn>
         </div>
       </PageContainer>
     </Section>
   );
 }
 
-// YAPPING
+// LEFT SIDE CONTENT YAPPING
 const Summary = () => {
   return (
-    <div className="space-y-10 text-lg text-secondary">
+    <div className="space-y-10 sm:text-lg text-secondary">
       <SectionTitle
         title="about"
         number={1}

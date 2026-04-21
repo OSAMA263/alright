@@ -13,25 +13,32 @@ type Types = {
   label: string;
 };
 
+export const LINKS = {
+  github: "https://github.com/OSAMA263",
+  linkedin: "https://www.linkedin.com/in/osama00/",
+  gmail: "mailto:osamaelseify2@gmail.com",
+  whatsapp: "https://wa.me/201121451306",
+};
+
 export const CONTACT_DETAILS: Types[] = [
   {
     Icon: BiLogoGithub,
-    url: "https://github.com/OSAMA263",
+    url: LINKS.github,
     label: "GitHub",
   },
   {
     Icon: BiLogoLinkedin,
-    url: "https://www.linkedin.com/in/osama00/",
+    url: LINKS.linkedin,
     label: "LinkedIn",
   },
   {
     Icon: BiLogoGmail,
-    url: "mailto:osamaelseify2@gmail.com",
+    url: LINKS.gmail,
     label: "Gmail",
   },
   {
     Icon: BiLogoWhatsapp,
-    url: "https://wa.me/201121451306",
+    url: LINKS.whatsapp,
     label: "WhatsApp",
   },
 ];

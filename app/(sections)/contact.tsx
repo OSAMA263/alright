@@ -2,35 +2,32 @@
 import PageContainer from "@/components/layout/page-container";
 import Section from "@/components/layout/section";
 import SectionTitle from "@/components/ui/section-title";
-import { CONTACT_DETAILS } from "@/data/contact-info";
+import { CONTACT_DETAILS, LINKS } from "@/data/contact-info";
 import Link from "next/link";
 import { MdOutlineMail } from "react-icons/md";
 import { Fragment } from "react/jsx-runtime";
 
 export default function Contact() {
   return (
-    <Section id="contact">
+    <Section id="contact" className="min-h-[70vh]!">
       <PageContainer>
         {/* touch me lule */}
-        <div className="flex flex-col [&>p]:text-secondary text-center w-fit mx-auto border-b pb-10 border-white/10 mb-6!">
+        <div className="flex flex-col [&>p]:text-secondary text-center w-fit mx-auto border-b px-4 pb-10 border-white/10 mb-6!">
           <SectionTitle
-            number={4}
+            number={0}
             title="Get In Touch"
             className="flex-col items-center! gap-2! [&_#gray-line]:hidden [&>h2]:lg:text-6xl!"
           />
           <p>
             If you would like to discuss a project or just say hi, I'm
-            always down to chat. <br className="max-md:hidden"/>
+            always down to chat. <br className="max-md:hidden" />
             My inbox is always open, and I'll try my best to get back
             to you!
           </p>
           {/* E-MAIL BUTTON */}
           <Link
             className="md:text-lg border w-fit mx-auto flex items-center gap-2 md:px-8 md:py-4 p-4 rounded-full border-darkerTeal transition-all duration-300 hover:bg-darkTeal hover:text-black mt-10 bg-darkerTeal/40 hover:scale-103"
-            href={
-              CONTACT_DETAILS.find(({ label }) => label === "Gmail")
-                ?.url ?? "#"
-            }
+            href={LINKS.gmail}
           >
             <MdOutlineMail className="text-2xl" /> Say Hello
           </Link>

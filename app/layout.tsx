@@ -5,6 +5,8 @@ import "./globals.css";
 import { CursorGlow } from "@/components/ui/cursor-glow";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
+import ToastProvider from "@/context/toast-context";
+import Toast from "@/components/toast";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,10 +34,18 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="bg-[#05080b] font-semibold text-white" style={{overflowX:"hidden"}}>
+      <body
+        className="bg-[#05080b] font-semibold text-white"
+        style={{ overflowX: "hidden" }}
+      >
         <Header />
         <CursorGlow />
-        <main>{children}</main>
+        
+        <ToastProvider>
+          <main>{children}</main>
+          <Toast />
+        </ToastProvider>
+
         <Footer />
       </body>
     </html>

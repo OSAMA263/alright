@@ -8,7 +8,7 @@ export default function ImportantProject(props: ProjectTypes) {
     <div className="grid md:grid-cols-2 max-md:gap-10 relative hover:[&_#overlay]:opacity-25">
       {/* PROJECT IMAGE */}
       <div
-        className={`relative about-teal-card z-10 ${props.id % 2 != 0 ? "md:order-2" : ""}`}
+        className={`relative card-teal-border z-10 ${props.id % 2 != 0 ? "md:order-2" : ""}`}
       >
         {/* OVERLAY ON THE IMAGE */}
         <div
