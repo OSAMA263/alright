@@ -5,13 +5,16 @@ import { LuGithub, LuExternalLink } from "react-icons/lu";
 
 export default function ImportantProject(props: ProjectTypes) {
   return (
-    <div className="grid grid-cols-2 relative">
+    <div className="grid md:grid-cols-2 max-md:gap-10 relative hover:[&_#overlay]:opacity-25">
       {/* PROJECT IMAGE */}
       <div
-        className={`relative about-teal-card z-10 hover:[&>div]:opacity-0 ${props.id % 2 != 0 ? "order-2" : ""}`}
+        className={`relative about-teal-card z-10 ${props.id % 2 != 0 ? "md:order-2" : ""}`}
       >
         {/* OVERLAY ON THE IMAGE */}
-        <div className="absolute transition-all max-xl:opacity-0 duration-400 size-full pointer-events-none rounded-2xl bg-darkerTeal" />
+        <div
+          id="overlay"
+          className="absolute transition-all max-xl:opacity-35 duration-400 size-full pointer-events-none rounded-2xl bg-darkerTeal"
+        />
         <Link target="_blank" href={props.demo} title="demo">
           <Image
             src={props.img!}
@@ -25,7 +28,7 @@ export default function ImportantProject(props: ProjectTypes) {
 
       {/* PROJECT DETAILS */}
       <div
-        className={`py-10 flex flex-col gap-6 ${props.id % 2 == 0 ? "items-end" : ""}`}
+        className={`md:py-10 flex flex-col md:gap-6 gap-3 ${props.id % 2 == 0 ? "md:items-end" : ""}`}
       >
         <span className="text-xs font-mono text-lightTeal">
           0{props.id + 1}
@@ -34,21 +37,21 @@ export default function ImportantProject(props: ProjectTypes) {
           href={props.demo}
           title="demo"
           target="_blank"
-          className="text-4xl capitalize transition-all hover:text-lightTeal"
+          className="md:text-4xl text-2xl capitalize transition-all hover:text-lightTeal"
         >
           {props.title}
         </Link>
         {/* DESCRIPTION */}
         <p
-          className={`relative z-50 w-[200%] p-4 rounded-lg bg-dark text-secondary ${
-            props.id % 2 == 0 ? "text-end" : ""
+          className={`relative z-50 md:w-[200%] p-4 max-lg:text-sm rounded-lg bg-dark text-secondary ${
+            props.id % 2 == 0 ? "md:text-end" : ""
           }`}
         >
           {props.des}
         </p>
 
         {/* TECH USED */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 flex-wrap">
           {props?.tech.map((skill) => (
             <span
               className="capitalize text-xs text-secondary/60"

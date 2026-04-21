@@ -4,7 +4,7 @@ import { LuGithub, LuExternalLink } from "react-icons/lu";
 
 export default function ProjectCard(props: ProjectTypes) {
   return (
-    <div className="border border-white/10 transition-all hover:border-lightTeal hover:-translate-y-2 duration-300 space-y-4 p-8 rounded-xl bg-dark">
+    <div className="border hover:[&_h2]:text-lightTeal border-white/10 transition-all hover:border-lightTeal hover:bg-dark hover:-translate-y-2 duration-300 md:space-y-4 space-y-2 md:p-8 p-4 rounded-xl bg-dark/30">
       <div className="flex items-center justify-between">
         <span className="textxl text-lightTeal font-mono">{`<0${props.id + 1}/>`}</span>
         {/* LINKS REPO AND DEOMo */}
@@ -19,7 +19,7 @@ export default function ProjectCard(props: ProjectTypes) {
       </div>
 
       {/* TITLE */}
-      <h2 className="text-2xl capitalize">
+      <h2 className="text-2xl capitalize transition-all duration-400">
         {props.title}{" "}
         {props.title === "portfolio" && (
           <span className="text-xs">(nostalgia)</span>
@@ -30,7 +30,7 @@ export default function ProjectCard(props: ProjectTypes) {
       <p className="text-sm text-secondary">{props.des}</p>
 
       {/* TECH USED */}
-      <div className="flex items-center gap-2">
+      <div className="flex items-center flex-wrap gap-2">
         {props.tech.map((skill) => (
           <span
             className="capitalize text-xs text-secondary/60"
