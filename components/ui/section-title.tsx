@@ -11,7 +11,7 @@ export default function SectionTitle(props: PropsType) {
     <div className={`flex items-end gap-3 mb-10 ${className ?? ""}`}>
       <span className="text-lightTeal text-xs font-mono">0{number}.</span>
       <h2 className="lg:text-5xl text-4xl capitalize text-white">{title}</h2>
-      <div className="w-[30%] h-px bg-white/10" />
+      <div className="w-[30%] h-px bg-white/10" id="gray-line" />
     </div>
   );
 }
