@@ -10,7 +10,7 @@ export default function MainPage() {
       <Hero />
       <About />
       <Experience />
-      <Projects/>
+      <Projects />
       <Contact />
     </>
   );
