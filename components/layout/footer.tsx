@@ -27,7 +27,7 @@ export default function Footer() {
                 target="_blank"
                 title={label}
                 href={url}
-                className="transition-all duration-500 rounded-full p-2 hover:text-darkTeal text-xl"
+                className="transition-all duration-500 rounded-full p-1 border border-white/10 hover:border-darkTeal hover:text-darkTeal text-xl hover:rotate-10"
               >
                 <Icon />
               </a>

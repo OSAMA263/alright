@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
 import { CursorGlow } from "@/components/ui/cursor-glow";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
@@ -40,7 +39,7 @@ export default function RootLayout({
       >
         <Header />
         <CursorGlow />
-        
+        {/* <Loading/> */}
         <ToastProvider>
           <main>{children}</main>
           <Toast />

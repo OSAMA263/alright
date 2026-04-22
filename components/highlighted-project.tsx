@@ -43,7 +43,7 @@ export default function ImportantProject(props: ProjectTypes) {
         </Link>
         {/* DESCRIPTION */}
         <p
-          className={`relative z-50 md:w-[200%] p-4 max-lg:text-sm rounded-lg bg-dark text-secondary ${
+          className={`relative z-40 md:w-[200%] p-4 max-lg:text-sm rounded-lg bg-dark text-secondary ${
             props.id % 2 == 0 ? "md:text-end" : ""
           }`}
         >

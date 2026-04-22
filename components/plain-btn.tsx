@@ -33,7 +33,7 @@ export default function PlainBtn(props: PropsType) {
 }
 
 const mesg = [
-  "War is peace, freedom is slavery, ignorance is strength.",
   "The worst that could happen is dying?, which freeing you from this world.",
+  "The chase is better than the catch.",
   "Hint: we all look the same but we are not.",
 ];

@@ -1,12 +1,10 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { NAV_LINKS } from "@/data/navigation-links";
 import { useEffect, useState } from "react";
-import { Link } from "react-scroll";
+import SmallScreenNavbar from "./small-screen-navbar";
+import NavbarLinks from "./navbar-links";
 
 export default function Header() {
-  const [activeSection, setActiveSection] = useState("base");
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -23,42 +21,15 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed w-full flex justify-center py-8 transition-all duration-500 sm:border-b z-50 ${scrolled ? "border-white/10 sm:backdrop-blur-sm sm:bg-dark/80" : "border-transparent"}`}
+      className={`fixed w-full flex justify-center py-8 transition-all duration-500 sm:border-b z-50 ${scrolled ? "md:border-white/10 border-transparent md:backdrop-blur-sm md:bg-dark/80" : "border-transparent"}`}
     >
-      <nav>
-        <ul className="flex items-center gap-8">
-          {NAV_LINKS.map(({ label, url }) => (
-            <li key={label} className="relative">
-              {/* link underline */}
-              {activeSection == url && <Underline />}
-
-              {/* link tag section */}
-              <Link
-                onSetActive={() => setActiveSection(url)}
-                onClick={() => setActiveSection(url)}
-                className={`relative font-semibold capitalize py-2 transition-all ${activeSection == url ? "text-darkTeal" : "text-secondary"}`}
-                to={url}
-                href={url}
-                duration={400}
-                hashSpy
-                smooth
-                spy
-              >
-                {label}
-              </Link>
-            </li>
-          ))}
-        </ul>
+      {/* large screens */}
+      <nav className="max-md:hidden">
+        <NavbarLinks />
       </nav>
+
+      {/* small screens */}
+      <SmallScreenNavbar />
     </header>
   );
 }
-
-const Underline = () => {
-  return (
-    <motion.span
-      layoutId="underline"
-      className="absolute w-full h-px z-0 bg-darkTeal bottom-0 left-0 rounded-md"
-    />
-  );
-};

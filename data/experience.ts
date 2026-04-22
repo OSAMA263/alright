@@ -31,6 +31,8 @@ export const EXP = [
       "Next",
       "JavaScript",
       "TypeScript",
+      "TanStack",
+      "Redux",
       "Tailwind CSS",
       "Framer Motion",
     ],

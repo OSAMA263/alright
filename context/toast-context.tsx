@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useState } from "react";
 
 type ToastContextType = {
   message: string | null;
@@ -15,10 +15,7 @@ export default function ToastProvider({
   children: React.ReactNode;
 }) {
   const [message, setMessage] = useState<string | null>(null);
-useEffect(()=>{
-console.log(message)
 
-},[message])
   return (
     <ToastContext.Provider value={{ message, setMessage }}>
       {children}

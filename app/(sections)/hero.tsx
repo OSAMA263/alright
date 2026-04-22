@@ -2,7 +2,7 @@
 import PlainBtn from "@/components/plain-btn";
 import Section from "@/components/layout/section";
 import GlowingCircle from "@/components/ui/glowing-circle";
-import { CONTACT_DETAILS } from "@/data/contact-info";
+import { IoMdDownload } from "react-icons/io";
 
 export default function Hero() {
   return (
@@ -25,18 +25,14 @@ export default function Hero() {
 
         {/* contact links */}
         <div className="flex items-center gap-4">
-          {CONTACT_DETAILS.map(({ url, label, Icon }) => (
-            <a
-              key={label}
-              aria-label={label}
-              target="_blank"
-              title={label}
-              href={url}
-              className="transition-all duration-500 rounded-full p-2 border border-white/10 hover:border-darkTeal hover:text-darkTeal text-2xl hover:rotate-10"
-            >
-              <Icon />
-            </a>
-          ))}
+          <a
+            href="https://drive.google.com/uc?export=download&id=1_akeEYhkjr0LGVcZB18UmECshjn_gDjY"
+            download="Osama_Khaled_Front-end_CV.pdf"
+            className="border flex items-center gap-2 border-darkTeal text-darkTeal px-6 py-2 rounded-lg text-sm uppercase transition-all duration-300 hover:bg-darkTeal hover:text-dark"
+          >
+            Resume
+            <IoMdDownload />
+          </a>
         </div>
       </div>
 
@@ -44,10 +40,13 @@ export default function Hero() {
       <GlowingCircle className="size-150 absolute right-0 translate-x-1/2" />
 
       {/*  */}
-      <p className="-rotate-90 w-fit right-0 translate-x-1/3 absolute text-sm text-secondary whitespace-nowrap">
+      <p className="max-md:hidden -rotate-90 w-fit -right-4 translate-x-1/3 absolute text-sm text-secondary whitespace-nowrap">
         Yesterday, today was tomorrow And tomorrow, today will be
         yesterday, breath{" "}
-        <PlainBtn step={0} className="text-darkerTeal text-2xl cursor-pointer">
+        <PlainBtn
+          step={0}
+          className="text-darkerTeal text-2xl cursor-pointer"
+        >
           .
         </PlainBtn>
       </p>
