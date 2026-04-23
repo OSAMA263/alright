@@ -6,7 +6,6 @@ import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import ToastProvider from "@/context/toast-context";
 import Toast from "@/components/toast";
-import PageTransition from "@/components/layout/page-transition";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,7 +33,10 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <PageTransition>
+      <body
+        className="bg-[#05080b] font-semibold text-white"
+        style={{ overflowX: "hidden" }}
+      >
         <Header />
         <CursorGlow />
         <ToastProvider>
@@ -42,7 +44,7 @@ export default function RootLayout({
           <Toast />
         </ToastProvider>
         <Footer />
-      </PageTransition>
+      </body>
     </html>
   );
 }

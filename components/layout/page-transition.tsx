@@ -7,14 +7,14 @@ export default function PageTransition({
   children: React.ReactNode;
 }) {
   return (
-    <motion.body
+    <body
       className="bg-[#05080b] font-semibold text-white"
       style={{ overflowX: "hidden" }}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ delay: 0.4, duration: 0.8 }}
+      // initial={{ opacity: 0 }}
+      // animate={{ opacity: 1 }}
+      // transition={{ delay: 0.5, duration: 0.8 }}
     >
       {children}
-    </motion.body>
+    </body>
   );
 }

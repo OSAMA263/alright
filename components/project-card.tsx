@@ -1,10 +1,21 @@
 import { ProjectTypes } from "@/data/projects";
 import Link from "next/link";
 import { LuGithub, LuExternalLink } from "react-icons/lu";
+import MotionEle from "./ui/animated-ele";
 
-export default function ProjectCard(props: ProjectTypes) {
+type ProjectsTypesDelay = ProjectTypes & {
+  ind: number;
+};
+
+export default function ProjectCard(props: ProjectsTypesDelay) {
   return (
-    <div className="border hover:[&_h2]:text-lightTeal border-white/10 transition-all hover:border-lightTeal hover:bg-dark hover:-translate-y-2 duration-300 md:space-y-4 space-y-2 md:p-8 p-4 rounded-xl bg-dark/30">
+    <MotionEle
+      y={20}
+      opacity
+      delay={0.2}
+      ind={props.ind}
+      className="border hover:[&_h2]:text-lightTeal border-white/10 transition-all hover:border-lightTeal hover:bg-dark hover:-translate-y-2 duration-300 md:space-y-4 space-y-2 md:p-8 p-4 rounded-xl bg-dark/30"
+    >
       <div className="flex items-center justify-between">
         <span className="textxl text-lightTeal font-mono">{`<0${props.id + 1}/>`}</span>
         {/* LINKS REPO AND DEOMo */}
@@ -40,6 +51,6 @@ export default function ProjectCard(props: ProjectTypes) {
           </span>
         ))}
       </div>
-    </div>
+    </MotionEle>
   );
 }

@@ -1,11 +1,22 @@
 import { ExpTypes } from "@/data/experience";
 import { FaExternalLinkAlt } from "react-icons/fa";
+import MotionEle from "./ui/animated-ele";
 
-export default function ExpSection(props: ExpTypes) {
-  const { title, company, duration, des, skills } = props;
+type ExpSectionProps = ExpTypes & {
+  ind: number;
+};
+
+export default function ExpSection(props: ExpSectionProps) {
+  const { title, company, duration, des, skills, ind } = props;
 
   return (
-    <div className="relative hover:[&_h2]:text-darkTeal pb-10 hover:[&_#line]:bg-lightTeal hover:[&_#circle]:bg-lightTeal hover:[&_#circle]:border-lightTeal">
+    <MotionEle
+      opacity
+      delay={.2}
+      y={20}
+      ind={ind}
+      className="relative hover:[&_h2]:text-darkTeal pb-10 hover:[&_#line]:bg-lightTeal hover:[&_#circle]:bg-lightTeal hover:[&_#circle]:border-lightTeal"
+    >
       <ProggressLine />
 
       {/* EXP DETAILS */}
@@ -42,7 +53,7 @@ export default function ExpSection(props: ExpTypes) {
           ))}
         </div>
       </div>
-    </div>
+    </MotionEle>
   );
 }
 

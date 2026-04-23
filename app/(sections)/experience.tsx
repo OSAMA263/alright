@@ -12,7 +12,7 @@ export default function Experience() {
 
         <div className="space-y-4">
           {EXP.map((data, i) => (
-            <ExpSection {...data} key={i} />
+            <ExpSection {...data} ind={i} key={i} />
           ))}
         </div>
       </PageContainer>

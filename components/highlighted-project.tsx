@@ -2,10 +2,22 @@ import { ProjectTypes } from "@/data/projects";
 import Image from "next/image";
 import Link from "next/link";
 import { LuGithub, LuExternalLink } from "react-icons/lu";
+import MotionEle from "./ui/animated-ele";
 
-export default function ImportantProject(props: ProjectTypes) {
+type ImportantProjectType = ProjectTypes & {
+  ind: number;
+};
+
+export default function ImportantProject(
+  props: ImportantProjectType,
+) {
   return (
-    <div className="grid md:grid-cols-2 max-md:gap-10 relative hover:[&_#overlay]:opacity-25">
+    <MotionEle
+      ind={props.ind}
+      opacity
+      y={20}
+      className="grid md:grid-cols-2 max-md:gap-10 relative hover:[&_#overlay]:opacity-25"
+    >
       {/* PROJECT IMAGE */}
       <div
         className={`relative card-teal-border z-10 ${props.id % 2 != 0 ? "md:order-2" : ""}`}
@@ -13,7 +25,7 @@ export default function ImportantProject(props: ProjectTypes) {
         {/* OVERLAY ON THE IMAGE */}
         <div
           id="overlay"
-          className="absolute transition-all max-xl:opacity-35 duration-400 size-full pointer-events-none rounded-2xl bg-darkerTeal"
+          className="absolute transition-all max-xl:opacity-35 duration-400 -inset-px pointer-events-none rounded-2xl z-10 bg-darkerTeal"
         />
         <Link target="_blank" href={props.demo} title="demo">
           <Image
@@ -72,6 +84,6 @@ export default function ImportantProject(props: ProjectTypes) {
           </Link>
         </div>
       </div>
-    </div>
+    </MotionEle>
   );
 }
