@@ -71,12 +71,12 @@ export default function Hero() {
             <MotionEle
               ind={ind}
               opacity
-              scale={.4}
+              scale={0.4}
               delay={1.6}
               key={label}
-              className="transition-all rounded-full p-2 border border-white/20 hover:border-darkTeal hover:text-darkTeal text-2xl hover:rotate-10"
             >
               <a
+                className="transition-all rounded-full p-2 border border-white/20 hover:border-darkTeal hover:text-darkTeal text-2xl hover:rotate-10 inline-block"
                 aria-label={label}
                 target="_blank"
                 title={label}
@@ -87,7 +87,6 @@ export default function Hero() {
             </MotionEle>
           ))}
         </div>
-
       </div>
 
       {/*  */}

@@ -10,7 +10,7 @@ import { Fragment } from "react/jsx-runtime";
 
 export default function Contact() {
   return (
-    <Section id="contact" className="min-h-[70vh]!">
+    <Section id="contact" className="min-h-[90vh]!">
       <PageContainer>
         {/* touch me lule */}
         <div className="flex flex-col [&>p]:text-secondary text-center w-fit mx-auto border-b px-4 pb-10 border-white/10 mb-6!">

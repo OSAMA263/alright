@@ -14,11 +14,11 @@ export default function SmallScreenNavbar() {
       >
         <div className="relative w-6 h-5">
           <Line
-            className={active ? "-rotate-45" : "-translate-y-[8px]"}
+            className={active ? "-rotate-45" : "-translate-y-2"}
           />
           <Line className={active ? "w-0 opacity-0" : ""} />
           <Line
-            className={active ? "rotate-45" : "translate-y-[6px]"}
+            className={active ? "rotate-45" : "translate-y-1.5"}
           />
         </div>
       </button>
