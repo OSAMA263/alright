@@ -33,7 +33,7 @@ export default function PlainBtn(props: PropsType) {
 }
 
 const mesg = [
-  "The worst that could happen is dying?, which freeing you from this world.",
+  "There are so few things you can do in a physical form.",
   "The chase is better than the catch.",
   "Hint: we all look the same but we are not.",
 ];
